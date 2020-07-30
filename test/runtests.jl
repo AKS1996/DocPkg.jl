@@ -2,5 +2,5 @@ using DocPkg
 using Test
 
 @testset "DocPkg.jl" begin
-    # Write your tests here.
+    @test 2*1 == 2
 end
