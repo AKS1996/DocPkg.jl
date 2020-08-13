@@ -1,5 +1,7 @@
 module DocPkg
 
+using MathOptSetDistances
+
 export func
 
 """
