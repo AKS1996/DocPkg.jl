@@ -3,6 +3,9 @@ uuid = "aefaee68-5208-4686-8a19-a6b09721a3ef"
 authors = ["Akshay Sharma <contact@imakshay.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+MathOptSetDistances = "3b969827-a86c-476c-9527-bb6f1a8fbad5"
+
 [compat]
 julia = "1"
 
