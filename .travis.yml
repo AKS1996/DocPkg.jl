@@ -3,6 +3,8 @@ os:
     - linux
 julia:
     - 1.0  # JuMP currently supports Julia 1.0 LTS
+before_sript:
+    - julia -e 'using Pkg; Pkg.add("https://github.com/matbesancon/MathOptSetDistances.jl"); Pkg.build("MathOptSetDistances.jl");'
 notifications:
     email: false
 sudo: false
