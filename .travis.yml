@@ -10,18 +10,17 @@ branches:
   only:
     - master
 
-# after_success:
-#     - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd()));
-#                                           Pkg.instantiate()'
-#     - julia --project=docs/ docs/make.jl
+after_success:
+    - julia --project=docs/ -e 'using Pkg; Pkg.add("Documenter");'
+    - julia --project=docs/ docs/make.jl
 
-jobs:
-  include:
-    - stage: "Documentation"
-      julia: 1.0
-      os: linux
+# jobs:
+#   include:
+#     - stage: "Documentation"
+#       julia: 1.0
+#       os: linux
       
-      script:
-        - julia --project=docs/ -e 'using Pkg; Pkg.add("Documenter"); Pkg.instantiate()'
-        - julia --project=docs/ docs/make.jl
-      after_success: skip
+#       script:
+#         - julia --project=docs/ -e 'using Pkg; Pkg.add("Documenter"); Pkg.instantiate()'
+#         - julia --project=docs/ docs/make.jl
+#       after_success: skip
