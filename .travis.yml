@@ -1,16 +1,14 @@
-# language: julia
-# os:
-#     - linux
-# julia:
-#     - 1.0  # JuMP currently supports Julia 1.0 LTS
-# # before_sript:
-#     # - julia -e 'using Pkg; Pkg.add(PackageSpec(url="https://github.com/matbesancon/MathOptSetDistances.jl"));'
-# notifications:
-#     email: false
-# sudo: false
-# branches:
-#   only:
-#     - master
+language: julia
+os:
+    - linux
+julia:
+    - 1.0  # JuMP currently supports Julia 1.0 LTS
+notifications:
+    email: false
+sudo: false
+branches:
+  only:
+    - master
 
 # jobs:
 #   include:
@@ -23,16 +21,5 @@
 #                                                Pkg.instantiate()'
 #         - julia --project=docs/ docs/make.jl
 #       after_success: skip
-## Documentation: http://docs.travis-ci.com/user/languages/julia/
-language: julia
-os:
-  - linux
-julia:
-  - 1.0
-branches:
-  only:
-    - master
-notifications:
-  email: false
-git:
-  depth: 99999999
+# git:
+#   depth: 99999999
