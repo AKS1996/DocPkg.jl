@@ -11,8 +11,7 @@ branches:
     - master
 
 after_success:
-    - julia -e 'using Pkg; Pkg.add("DocPkg");'
-    - julia --project=docs/ -e 'using Pkg; Pkg.add("Documenter");'
+    - julia --project=docs/ -e 'using Pkg; Pkg.add(Pkg.PackageSpec(url="https://github.com/matbesancon/MathOptSetDistances.jl")); Pkg.add("Documenter");'
     - julia --project=docs/ docs/make.jl
 
 # jobs:
