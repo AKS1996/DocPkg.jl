@@ -11,7 +11,8 @@ branches:
     - master
 
 after_success:
-    - julia --project=docs/ -e 'using Pkg; Pkg.add("DocPkg"); Pkg.add("Documenter");'
+    - julia -e 'using Pkg; Pkg.add("DocPkg");'
+    - julia --project=docs/ -e 'using Pkg; Pkg.add("Documenter");'
     - julia --project=docs/ docs/make.jl
 
 # jobs:
