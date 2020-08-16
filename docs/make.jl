@@ -8,6 +8,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "Updated" => "updated.md",
     ],
     strict = true,  # See https://github.com/JuliaOpt/JuMP.jl/issues/1576
     repo="https://github.com/AKS1996/DocPkg.jl/blob/{commit}{path}#L{line}",
